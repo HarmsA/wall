@@ -1,0 +1,45 @@
+.post_container {
+    border: 2px solid black;
+    padding: 0px;
+    margin: 5px;
+}
+.container {
+    width: 70%;
+}
+#date {
+    font-size: x-small;
+}
+.post_title {
+    background-color: lightgrey;
+    padding: 0;
+    padding: 2px;
+}
+.container p {
+    margin: 5px 5px 5px 15px;
+}
+#name {
+    padding-left: 20px;
+    font-style: italic;
+}
+#date {
+    padding-left: 20px;
+}
+.comment_container {
+    border: 1px solid black;
+    width: 50%;
+    display: block;
+    float: right;
+
+}
+.comment_container p {
+    margin: 5px 5px 5px 15px;
+}
+#comment {
+    margin-left: 25%;
+    padding: 5px;
+}
+#comment_submit {
+    margin: 5px;
+    position: relative;
+    left: 80%;
+}

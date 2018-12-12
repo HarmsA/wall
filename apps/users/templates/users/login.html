@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    {% load static %}
+    <!--<link rel="stylesheet" type="text/css" href="main.css"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'users/main.css' %}">
+</head>
+<body>
+<div class="container">
+    {% if messages %}
+        <ul class="messages">
+            {% for message in messages %}
+                <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            {% endfor %}
+</ul>
+    {% endif %}
+    <h1>Login</h1>
+    <form action="{% url 'users:login_validate' %}" method="post" >
+        {% csrf_token %}
+        <div class="form-group">
+            <label  for="email">Email:</label>
+            <input class="form-control" type="text" name="email">
+            <label for="password">Password:</label>
+            <input class="form-control" type="password" name="password" id="">
+            <input type="submit" value="Submit" class="button">
+        </div>
+    </form>
+        <a href="{% url 'users:register' %}" class="btn btn-default">Register</a>
+
+</div>
+</body>
+</html>
