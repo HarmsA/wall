@@ -10,5 +10,6 @@ def process(request):
         for error in errors:
             messages.error(request, error)
     else:
-        Comment.objects.create_comment(request.POST)
+        user_id = request.session['user_id']
+        Comment.objects.create_comment(request.POST, id)
     return redirect('posts:index')

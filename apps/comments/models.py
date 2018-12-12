@@ -13,12 +13,12 @@ class CommentManager(models.Manager):
         else:
             return False
 
-    def create_comment(self, form):
+    def create_comment(self, form, id):
         post = Post.objects.get(id=form['post_id'])
-        user = User.objects.get(id=form['user_id'])
+        print('id = ',id)
         comment = self.create(
             comment=form['content'],
-            user_id=user,
+            user_id=id,
             post_id=post,
         )
         return comment

@@ -32,3 +32,6 @@ def register_validate(request):
         return redirect('posts:index')
     return redirect('users:register')
 
+def logout(request):
+    request.session.clear()
+    return redirect('users:login')

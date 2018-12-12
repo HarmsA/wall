@@ -28,11 +28,18 @@
     border: 1px solid black;
     width: 50%;
     display: block;
-    float: right;
+    margin-left: 40%;
+    margin-bottom: 2px;
 
 }
 .comment_container p {
     margin: 5px 5px 5px 15px;
+}
+.comment_container span {
+    font-style: italic;
+    font-size: xx-small;
+    vertical-align: top;
+    padding-right: 5px;
 }
 #comment {
     margin-left: 25%;
