@@ -11,5 +11,7 @@ def process(request):
             messages.error(request, error)
     else:
         user_id = request.session['user_id']
-        Comment.objects.create_comment(request.POST, id)
+        print(user_id)
+        print('9'*80)
+        Comment.objects.create_comment(request.POST, user_id)
     return redirect('posts:index')

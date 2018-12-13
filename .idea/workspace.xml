@@ -5,11 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/comments/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/comments/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/comments/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/comments/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/posts/static/posts/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/apps/posts/static/posts/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/posts/templates/posts/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/apps/posts/templates/posts/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/posts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/posts/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/apps/users/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +27,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apps/comments/views.py">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="280">
-                  <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+                  <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
                   <folding>
                     <element signature="e#0#45#0" expanded="true" />
                   </folding>
@@ -44,10 +39,10 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+          <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/apps/posts/views.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="637">
+                <state relative-caret-position="563">
                   <caret line="37" column="16" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="16" />
                   <folding>
                     <element signature="e#0#45#0" expanded="true" />
@@ -108,8 +103,8 @@
           <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/apps/comments/models.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+                <state relative-caret-position="360">
+                  <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#28#0" expanded="true" />
                   </folding>
@@ -151,8 +146,8 @@
         <option value="$PROJECT_DIR$/apps/users/views.py" />
         <option value="$PROJECT_DIR$/apps/users/urls.py" />
         <option value="$PROJECT_DIR$/apps/posts/views.py" />
-        <option value="$PROJECT_DIR$/apps/comments/views.py" />
         <option value="$PROJECT_DIR$/apps/posts/templates/posts/index.html" />
+        <option value="$PROJECT_DIR$/apps/comments/views.py" />
         <option value="$PROJECT_DIR$/apps/comments/models.py" />
       </list>
     </option>
@@ -570,12 +565,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/comments/models.py">
+    <entry file="file://$PROJECT_DIR$/apps/posts/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        <state relative-caret-position="563">
+          <caret line="37" column="16" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="16" />
           <folding>
-            <element signature="e#0#28#0" expanded="true" />
+            <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -583,19 +578,19 @@
     <entry file="file://$PROJECT_DIR$/apps/comments/views.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="280">
-          <caret line="14" column="34" lean-forward="true" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/apps/posts/views.py">
+    <entry file="file://$PROJECT_DIR$/apps/comments/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="637">
-          <caret line="37" column="16" selection-start-line="37" selection-start-column="4" selection-end-line="37" selection-end-column="16" />
+        <state relative-caret-position="360">
+          <caret line="18" column="36" lean-forward="true" selection-start-line="18" selection-start-column="36" selection-end-line="18" selection-end-column="36" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
