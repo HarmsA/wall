@@ -15,15 +15,15 @@ class CommentManager(models.Manager):
 
     def create_comment(self, form, user_id):
         post = Post.objects.get(id=form['post_id'])
-        user = User.objects.get(id=form['user_id'])
+        user = User.objects.get(id=user_id)
         print('post -> ', post.user)
         print('user -> ', user.f_name)
         comment = self.create(
             comment=form['content'],
-            user_id=user_id,
+            user_id=user,
             post_id=post,
         )
-        return comment
+        return True
 
 
 

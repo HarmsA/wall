@@ -6,8 +6,8 @@ class PostManager(models.Manager):
     def process_post(self, form, id):
         user = User.objects.get(id=id)
         errors = []
-        print('User = ', user.id)
-        print('*'*80)
+        # print('User = ', user.id)
+        # print('*'*80)
         if len(form['title'])<1:
             errors.append('Must have a Title.')
         if len(form['message'])<1:

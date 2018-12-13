@@ -8,22 +8,12 @@ def index(request):
         return redirect('users:login')
     else:
         userid = request.session['user_id']
-        print(userid)
-        print('8' * 80)
         user = User.objects.filter(id=userid)
         for info in user:
             f_name = info.f_name.capitalize()
-            l_name = info.l_name
 
         post = Post.objects.all()
-
         comments = Comment.objects.all()
-        print(comments)
-        # for each in comments:
-        #     print(each.comment)
-        #     print(each.user_id)
-        #     print('8'*80)
-        #     print(each.post_id_id)
         context = {
             'user_id':userid,
             'all_post':post,
@@ -36,9 +26,8 @@ def index(request):
         return render(request, 'posts/index.html', context)
 
 def process_post(request):
-    post = Post.objects.process_post(request.POST, request.session['user_id'])
+    Post.objects.process_post(request.POST, request.session['user_id'])
     return redirect('posts:index')
 
 def posts(request):
-
     return render(request, 'posts/posts.html')

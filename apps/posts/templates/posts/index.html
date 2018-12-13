@@ -17,15 +17,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>Welcome {{ name }}, to your home page</h1>
-        <a href="{% url 'users:logout' %}">Log out</a>
-{#            {{ user_id }}#}
-{#            {% for user in user_info %}#}
-{#                <h2>{{ user.f_name }}</h2>#}
-{#                <h2>{{ user.l_name }}</h2>#}
-{#                <h2>{{ user.email }}</h2>#}
-{#                <h2>{{ user.id }}</h2>#}
-{#            {% endfor %}#}
+    <h1>Welcome {{ name }}, to your home page</h1>
+    <a href="{% url 'users:logout' %}">Log out</a>
+
     {% if messages %}
         <ul class="messages">
             {% for message in messages %}
@@ -33,62 +27,44 @@
             {% endfor %}
         </ul>
     {% endif %}
-        <form action="{% url 'posts:process_post' %}" method="post">
-            {% csrf_token %}
-            <label for="title">Title</label>
-            <input class="form-control" type="text" name="title">
-            <label for="message"></label>
-            <textarea class="form-control" rows="4" cols="50" name="message"></textarea>
-            <input type="submit" value="Submit">
-        </form>
-        {% for post in posts reversed %}
-            <div class="post_container">
-                <div class="post_title">Title: {{ post.title }},{{ post.id }}
-                    <span id="date">Date Published: {{ post.created_at }}
-                    <span id="name">by: {{ post.user }}</span></span>
-                </div>
-                <p>{{ post.message }}</p>
 
-{#                /* how to compare the comment.post_id with the post.id*/#}
-{#                <div class="comment_container">#}
-{#                    {% for comment in comments reversed %}#}
-{#                        {{ post.id }}#}
-{#                        {% if {{ comment.post_id_id }} {{ post.id}} %}#}
-{#                            <p>Comment by: {{ comment.user_id }} Date: {{ comment.created_at }}</p>#}
-{#                            <p>{{ comment.comment }}</p>#}
-{#                        {% endif %}#}
-{#                        {{ comment.post_id_id }}:#}
-{#                    {% endfor %}#}
-{#                </div>#}
+    <form action="{% url 'posts:process_post' %}" method="post">
+        {% csrf_token %}
+        <label for="title">Title of Post</label>
+        <input class="form-control" type="text" name="title">
+        <label for="message">Post content</label>
+        <textarea class="form-control" rows="4" cols="50" name="message"></textarea>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% for post in posts reversed %}
+        <div class="post_container">
+            <div class="post_title">Title: {{ post.title }}
+                <span id="date">Date Published: {{ post.created_at }}
+                <span id="name">by: {{ post.user }}</span></span>
+            </div>
+            <p>{{ post.message }}</p>
+
             {% for comment in comments %}
-{#            post.id: {{ post.id}}#}
-{#            comment.post_id_id: {{ comment.post_id_id }}#}
                 {% if  comment.post_id_id ==  post.id %}
                 <div class="comment_container">
-                    <p><span>By: {{ comment.user_id }}</span>{{comment.comment}}</p>
+                    <p><span>By: {{ comment.user_id }} - {{ comment.created_at }}</span>{{comment.comment}}</p>
                 </div>
                 {% endif %}
             {% endfor %}
 
-        <div id="comment">
-            <form action="{% url 'comments:process' %}" method="post">
-                {% csrf_token %}
-                <label for="content">Comment:</label>
-                <input class="form-control clearfix" type="text" name="content">
-                <input type="hidden" name="post_id" value="{{ post.id }}">
-                <input type="hidden" name="user_id" value="{{ post.user_id }}">
-                <input id="comment_submit" type="submit" value="Submit">
+            <div id="comment">
+                <form action="{% url 'comments:process' %}" method="post">
+                    {% csrf_token %}
+                    <label for="content">Comment:</label>
+                    <input class="form-control clearfix" type="text" name="content">
+                    <input type="hidden" name="post_id" value="{{ post.id }}">
+                    <input type="hidden" name="user_id" value="{{ post.user_id }}">
+                    <input id="comment_submit" type="submit" value="Submit">
                 </form>
-        </div>
-
             </div>
-        {% endfor %}
-
-
-
-
-
-
+        </div>
+    {% endfor %}
     </div>
 </body>
 </html>
